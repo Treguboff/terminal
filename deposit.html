@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./components/fontawesome-free-6.4.0-web/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" charset="utf-8"
+        href="./components/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- global style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/style.css">
+
+    <!-- local style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/numpad.css">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/deposit.css">
+
+    <!--
+    <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
+    -->
+
+    <!-- тут подключим виртуальную клавиатуру -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./components/keyboard/style.css">
+    <script src="./components/keyboard/onscreen-keyboard.js"></script>
+
+    <title>APP</title>
+</head>
+
+<body class="d-flex flex-column h-100 overflow-hidden" data-page="deposit">
+
+    <header>
+        <div class="figure">
+            <img src="./img/header/banner.jpg">
+        </div>
+    </header>
+
+    <main class="mt-3 h-100">
+
+        <div class="chapter container mt-3  border-start border-light">
+            <div class="row p-3">
+                <div class="col">
+                    <p class="title">Пополнение лицевого счета</p>
+                    <p class="sub-title">Внесите требуемую сумму</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5" style="background-color: beige;">
+
+            <div class="row contact-widget justify-content-center">
+
+                <div class="col-12 col-lg-10 section-heading ">
+
+                    <div class="col-12">
+
+                        <div class="mt-5 mb-3">
+
+                            <div class="text-center">
+                                <h2><i class="fa-regular fa-credit-card" width="10%"></i>
+                                    <span class="deposit"></span>
+                                </h2>
+                            </div>
+
+                            <br>
+
+                            <form name="contact" method="POST" netlify="" netlify-honeypot="welcome-bot">
+
+                                <div id="empty"></div>
+
+                                <div id="page1">
+
+                                    <p class="fs-3">Шаг 1: Введите сумму для пополнения счета</p>
+
+                                    <div class="container mt-4 mb-4"
+                                        style="border: 2px solid black; border-radius:20px">
+                                        <div class="row mt-4 mb-4">
+                                            <div class="col-12">
+
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control" id="demoA"
+                                                        placeholder="Введите сумму для внесения" readonly
+                                                        style="height: 100px; font-size: 2rem;">
+                                                    <span class="input-group-text fs-3">₽</span>
+                                                    <span class="input-group-text fs-1">
+                                                        <div class="col-12">
+                                                            <i class="fa-solid fa-calculator p-4" id="calc"></i>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                                <p>Минимальная сумма: 10 Р Максимальная сумма: 100 000 Р</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="procedural">
+
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 35%"
+                                                aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p></p>
+
+                                        <br>
+
+                                        <div class="text-end mb-5 ">
+                                            <button type="button" id="btn_next" class="btn btn-outline-primary next"
+                                                style="font-size: 3rem;border-radius: 20px;">Далее</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="page2" style="display: none">
+
+                                    <p class="fs-3">Шаг 2: Выберите удобный способ оплаты</p>
+
+                                    <div class="container mt-4 mb-4"
+                                        style="border: 2px solid black; border-radius:20px">
+                                        <div class="row mt-4 mb-4">
+                                            <div class="col-12">
+
+                                                <div class="radio-with-Icon">
+
+                                                    <p class="radioOption-Item">
+                                                        <input type="radio" name="Types" id="Type2" value="qr" checked
+                                                            class="ng-valid ng-dirty ng-touched ng-empty"
+                                                            aria-invalid="false">
+                                                        <label for="Type2">
+                                                            <i class="fa-solid fa-qrcode fs-3 me-3"></i>
+                                                            <span class="fs-3">Оплата СБП (QR)</span>
+                                                        </label>
+                                                    </p>
+
+                                                    <p class="radioOption-Item">
+                                                        <input type="radio" name="Types" id="Type1" value="card"
+                                                            class="ng-valid ng-dirty ng-touched ng-empty"
+                                                            aria-invalid="false">
+                                                        <label for="Type1">
+                                                            <i class="fa-regular fa-credit-card fs-3 me-3"></i>
+                                                            <span class="fs-3">Банковская карта</span>
+                                                        </label>
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <div class="procedural">
+                                        <div class="progress" style="height: 10px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 70%"
+                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <p></p>
+
+                                        <br>
+
+                                        <div class="text-end mb-5">
+                                            <button type="button" id="btn_prev" class="btn btn-outline-secondary me-3"
+                                                style="font-size: 3rem;border-radius: 20px;">Назад</button>
+                                            <button type="submit" id="btnPayDeposit"
+                                                class="btn btn-outline-primary px-3 py-2"
+                                                style="font-size: 3rem;border-radius: 20px;">Оплатить</button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="w-100" style="position: absolute; bottom: 10px; z-index: 2;">
+        <div class="container mb-3">
+            <div class="row">
+
+                <div class="col">
+                    <a href="./menu.html" class="circle">
+                        <!--Menu Icon -->
+                        <span class="menu"></span>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="./index.html" class="circle">
+                        <!--Home Icon -->
+                        <span class="home"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/logic/deposit.js"></script>
+    <script src="./js/etc/qrcode.min.js"></script>
+
+    <!--
+    <script src="./js/etc/numpad.js"></script>
+    -->
+
+
+    <script src="./components/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background-color: rgb(114, 8, 8);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white;">info</h5>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="container mt-4 mb-4"
+                        style="border: 2px solid black; border-radius:20px; background-color: beige; ">
+
+                        <div class="row mt-4 mb-4">
+                            <div class="col-12">
+                                <label class="form-label fs-2">Итого к оплате:</label>
+                                <div class="input-group mb-3">
+                                    <input id="total_pay" type="text" class="form-control fs-2"
+                                        placeholder="Сумма оплаты" readonly style="height: 100px;">
+                                    <span class="input-group-text fs-3">₽</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- qr -->
+                        <div id="m_qr" style="display: none;">
+
+                            <div class="row mt-4 mb-4">
+                                <div class="col-6">
+                                    <div class="qr m-2">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <p class="fs-3">* Запустите приложение банка</p>
+                                    <p class="fs-3">* Отсканируйте QR код</p>
+                                    <p class="fs-3">* Подтвердите платеж</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- bank -->
+                        <div id="m_card" style="display: none;">
+
+                            <div class="row mt-4 mb-4">
+                                <div class="col-12">
+                                    <div class="circle my_center">
+                                        <img src="./img/pos-payment.png" style="height: 100px;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4 mb-4">
+                                <div class="col">
+                                    <div class="icons text-center mt-3 mb-3">
+                                        <i class="fas fa-angle-down fa-5x" style="color: black;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- deposit -->
+                        <div id="m_deposit" style="display: none;">
+
+                            <div class="row mt-4 mb-4">
+                                <div class="col">
+                                    <div class="icons text-center mt-3 mb-3">
+                                        <i class="fas fa-angle-down fa-5x" style="color: black;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button id="paymentModalClose" type="button" class="btn btn-outline-warning" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Отменить оплату</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="viewMsg" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background-color: rgb(114, 8, 8);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label" style="color: white;">info</h5>
+                    <span class="fs-2" style="color: white;" id="msgTimer"></span>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container mt-4 mb-4"
+                        style="border: 2px solid black; border-radius:20px; background-color: beige; ">
+
+                        <div class="text-center" id="successMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/success.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1s"></p>
+                                    <p class="fs-2" id="msg2s"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center" id="unsuccessMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/unsuccess.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1u"></p>
+                                    <p class="fs-2" id="msg2u"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="FormViewMsgClose" class="btn btn-outline-warning" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Закрыть</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="LogoutDialog" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background-color: rgb(114, 8, 8);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label" style="color: white;">info</h5>
+                </div>
+                <div class="modal-body">
+
+                    <p class="text-center" style="font-size: 50px; color: white;" id="leftTime"></p>
+
+                    <div class="container mt-4 mb-4">
+                        <div class="col-12 text-center">
+                            <p style="font-size: 40px; color: white;">Хотите продолжить?</p>
+                            <p style="font-size: 30px; color: white;">Ваша сессия скоро будет завершена.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button id="LogoutClose" class="btn btn-outline-warning" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Выйти</button>
+
+                    <button id="LogoutNext" class="btn btn-outline-success" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Продолжить</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

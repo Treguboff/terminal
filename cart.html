@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./components/fontawesome-free-6.4.0-web/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" charset="utf-8"
+        href="./components/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- global style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/style.css">
+
+    <!-- local style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/cart.css">
+
+    <!--
+    <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
+    -->
+
+
+    <title>APP</title>
+</head>
+
+<body class="d-flex flex-column h-100 overflow-hidden" data-page="cart">
+
+    <header>
+        <div class="figure">
+            <img src="./img/header/banner.jpg">
+        </div>
+    </header>
+
+    <main class="mt-3 h-100">
+
+        <div class="chapter container mt-3 border-start border-light">
+            <div class="row p-3">
+                <div class="col">
+                    <p class="title">Магазин</p>
+                    <p class="sub-title">Корзина товаров (услуг)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 mb-5" style="background-color: beige; border-radius: 13px;">
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered mt-5 mb-5 ">
+                    <thead>
+                        <tr>
+                            <th>Артикул</th>
+                            <th>Название</th>
+                            <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Сумма</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart">
+                        <tr>
+                            <td colspan="6"><img src="img/loading.gif" alt="" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>Итого: <span id="total-cart-summa"></span> руб.</div>
+            <br />
+            <a class="btn btn-info" href="order.html">Оформить заказ</a>
+
+        </div>
+
+    </main>
+
+    <footer class="w-100" style="position: absolute; bottom: 10px; z-index: 2;">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col">
+                    <a href="menu.html" class="circle">
+                        <i class='fas fa-bars fa-4x icon' style='color: darkcyan;'></i>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="index.html" class="circle">
+                        <i class='fas fa-home fa-4x icon' style='color: darkcyan;'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/etc/kineticscroll.js"></script>
+    <script type="module" src="./js/logic/cart.js"></script>
+
+    <script src="./components/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="viewMsg" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background-color: rgb(114, 8, 8);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label" style="color: white;">info</h5>
+                    <span class="fs-2" style="color: white;" id="msgTimer"></span>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container mt-4 mb-4"
+                        style="border: 2px solid black; border-radius:20px; background-color: beige; ">
+
+                        <div class="text-center" id="successMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/success.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1s"></p>
+                                    <p class="fs-2" id="msg2s"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center" id="unsuccessMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/unsuccess.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1u"></p>
+                                    <p class="fs-2" id="msg2u"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="FormViewMsgClose" class="btn btn-outline-warning" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Закрыть</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

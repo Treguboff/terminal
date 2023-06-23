@@ -1,0 +1,87 @@
+.paper>.row {
+    width: fit-content;
+}
+
+.paper>.row>.col {
+    cursor: pointer;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+#indic {
+    position: absolute;
+    left: 1px;
+    width: 10px;
+    height: 40px;
+    background-color: #ff3e00;
+    z-index: 1;
+}
+
+.container2 {
+
+    max-height: 1045px;
+    background-color: beige;
+    border-radius: 13px;
+
+    overflow: hidden;
+    transform: scale(1);
+
+}
+
+/*
+span.title {
+    all: initial
+}
+*/
+
+h1 {
+    color: green;
+}
+
+/*
+.multipleSelection {
+    width: 300px;
+}
+*/
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    color: black;
+    font-style: italic;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.form-check {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    border: 1px #8DF5E4 solid;
+    background-color: white;
+}
+
+.form-check label {
+    display: block;
+}
+
+.form-check label:hover {
+    background-color: darkgrey;
+}
+
+
+.card-title {
+    max-height: 80px;
+    min-height: 80px;
+}

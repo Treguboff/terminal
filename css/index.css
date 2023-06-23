@@ -1,0 +1,15 @@
+.my_btn {
+    font-size: 3rem;
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+}
+
+.my_btn:hover {
+    text-decoration: none;
+}
+
+.my_btn:active {
+    position: relative;
+    top: 5px;
+}

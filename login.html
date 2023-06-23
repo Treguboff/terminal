@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./components/fontawesome-free-6.4.0-web/css/all.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" charset="utf-8"
+        href="./components/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <!-- global style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/style.css">
+
+    <!-- local style -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/login.css">
+
+    <!--
+    <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
+    -->
+
+    <title>APP</title>
+</head>
+
+<body class="d-flex flex-column h-100" data-page="login">
+
+    <header>
+        <div class="figure">
+            <img src="./img/header/banner.jpg">
+        </div>
+    </header>
+
+    <main class="mt-3 h-100">
+
+        <div class="chapter container mt-3 mb-5 border-start border-light">
+            <div class="row p-3">
+                <div class="col">
+                    <p class="title">Авторизация</p>
+                    <p class="sub-title">По браслету или карте</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="window-center">
+
+            <div class="container test_center">
+
+                <!--для тестирования login-->
+                <a class="cart" href="#">
+                    <div class="container-fluid text-center mb-4" style="margin-top: 20rem;">
+                        <img src="./img/login/fitness_card.png" class="img-fluid">
+                    </div>
+                </a>
+
+                <p style="margin-top: 10rem; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 2rem; font-weight: 200; line-height: 1.5rem; color: aliceblue;"
+                    class="text-center">
+                    Приложите Вашу карту или браслет
+                </p>
+                <br>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 2rem; font-weight: 200; line-height: 1.5rem; color: aliceblue;"
+                    class="text-center">
+                    к считывателю
+                </p>
+
+                <div class="icons text-center mb-5" style="margin-top: 10rem;">
+                    <i class="fas fa-angle-down fa-5x" style="color: aliceblue;"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-100" style="position: absolute; bottom: 10px; z-index: 2;">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col">
+                    <a href="./index.html" class="circle">
+                        <!--Home Icon -->
+                        <span class="home"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./components/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="viewMsg" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background-color: rgb(114, 8, 8);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal2Label" style="color: white;">info</h5>
+                    <span class="fs-2" style="color: white;" id="msgTimer"></span>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container mt-4 mb-4"
+                        style="border: 2px solid black; border-radius:20px; background-color: beige; ">
+
+                        <div class="text-center" id="successMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/success.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1s"></p>
+                                    <p class="fs-2" id="msg2s"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center" id="unsuccessMsg" style="display: none;">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="./img/unsuccess.svg" style="height: 350px;" class="mt-5 mb-5">
+                                </div>
+                                <div class="row">
+                                    <p class="fs-1" id="msg1u"></p>
+                                    <p class="fs-2" id="msg2u"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button id="FormViewMsgClose" class="btn btn-outline-warning" data-bs-dismiss="modal"
+                        style="font-size: 2rem;">Закрыть</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+@viewport {
+    user-select: none;
+    zoom: normal;
+    user-zoom: fixed;
+}
+
+:root {
+    --color-terfit: rgb(114, 8, 8);
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    zoom: normal;
+    user-zoom: fixed;
+}
+
+header>.figure {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+}
+
+header>.figure>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    touch-action: pan-y;
+}
+
+main {
+    background-color: var(--color-terfit);
+}
+
+/* оформление разделов */
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    line-height: 2.5rem;
+}
+
+.sub-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: white;
+    line-height: 2.5rem;
+}
+
+.window-center {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+/* кнопки меню footer */
+.circle {
+    color: transparent;
+    width: 150px;
+    height: 150px;
+    /*
+    border: 3px solid orangered;
+    */
+    border: 5px solid red;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    margin: 0 auto;
+
+    text-decoration: none;
+}
+
+.circle .icon {
+    line-height: 100%;
+}
+
+.wallpaper {
+    background-color: beige;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+
+    height: 1045px;
+}
+
+
+.loader {
+    border: 1px solid white;
+    height: 50px;
+    width: 50px;
+}
+
+.invisible {
+    display: none;
+}
+
+.home::before {
+
+    content: '\e553';
+
+    font: var(--fa-font-solid);
+    color: white;
+    font-size: 4rem;
+}
+
+.menu::before {
+
+    content: '\f0c9';
+
+    font: var(--fa-font-solid);
+    color: white;
+    font-size: 4rem;
+}
+
+.basket::before {
+
+    content: '\f217';
+
+    font: var(--fa-font-solid);
+    color: white;
+    font-size: 4rem;
+}
+
+.noDebt::before {
+
+    content: '\f164';
+
+    font: var(--fa-font-solid);
+    color: gold;
+    font-size: 4rem;
+}
