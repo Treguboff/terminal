@@ -551,6 +551,10 @@ export var view = {
 
             obj.forEach(function (item) {
 
+                // оформление карточки bootstrap
+                // https://codepen.io/sharomet/pen/JMqpdK
+
+
                 // нахождение нормального наименования занятия !
                 let _nameArr = item.service.split(/[:;,\r\n]/);
 
@@ -577,7 +581,10 @@ export var view = {
         
                     <div class="card-footer">
                         <button type="button" class="btn btn-outline-warning">Купить</button>
-                        <button type="button" class="btn btn-outline-primary">В корзину</button>
+                        <button type="button" class="btn btn-outline-primary">
+                            В корзину
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        </button>
                     </div>
         
                 </div>

@@ -122,6 +122,24 @@ export var controller = {
     // SHOP
     async catalog_init() {
 
+        // https://codepen.io/netsi1964/pen/eYpBowK
+        // https://codepen.io/taboo09/pen/rNrrqJ
+
+
+        // test
+        let data = {
+            "client": {
+                "id": "fe2698e3-3e90-11e9-ada5-0050568b5c63",
+                "name": "Абалухова Елизавета Дмитриевна",
+                "birthday": "03.11.1997",
+                "phone": "79161556828",
+                "mail": "ladybird2016@gmail.com"
+            }
+        }
+        let user = JSON.stringify(data.client);
+        localStorage.setItem('User', user);
+        // test
+
         let objClient = controller.getClientFromLocalStorage();
 
         try {
