@@ -303,7 +303,7 @@ export var controller = {
                     // 3. Начинаем ожидание статуса оплаты
                     // создаем экземпляр контроллера
 
-                    const controller = new TimeoutAbortController(180); // 3min
+                    const controller = new TimeoutAbortController(120000); // 2min
                     //const controller = new AbortController();
                     const signal = controller.signal;
 
@@ -547,7 +547,7 @@ export var controller = {
                 let formQR = view.render_ViewPayment('qr', res);
                 // 3. Начинаем ожидание статуса оплаты
                 // создаем экземпляр контроллера
-                const controller = new TimeoutAbortController(2); //3min - 180
+                const controller = new TimeoutAbortController(120000); //2 мин
                 //const controller = new AbortController();
                 const signal = controller.signal;
                 let abortBtn = document.getElementById('paymentModalClose');
