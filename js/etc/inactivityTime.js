@@ -1,7 +1,7 @@
 export function inactivityTime() {
 
     // время допустимого бездействия пользователя (sec)
-    let userTime = 30;
+    var userTime = 30;
 
     // время показа вопроса об окончательном выходе (sec)
     let msgTime = 10;
