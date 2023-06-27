@@ -1,7 +1,7 @@
 export function inactivityTime() {
 
     // время допустимого бездействия пользователя (sec)
-    var userTime = 30;
+    var userTime = 120; //2 min - operation qr pay
 
     // время показа вопроса об окончательном выходе (sec)
     let msgTime = 10;
