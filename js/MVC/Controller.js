@@ -303,8 +303,6 @@ export var controller = {
                     // 3. Начинаем ожидание статуса оплаты
                     // создаем экземпляр контроллера
 
-                    alert(userTime); // проверяем доступность переменной
-
                     const controller = new TimeoutAbortController(180); // 3min
                     //const controller = new AbortController();
                     const signal = controller.signal;
